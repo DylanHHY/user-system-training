@@ -1,0 +1,25 @@
+<h1>Sign Up</h1>
+
+
+<% if field_with_errors? %>
+  
+<% else %>
+  
+<% end %>
+
+<%= form_with model: @user do |f| %>
+  <div>
+    <%= f.label :email, "Email"%>
+    <%= f.email_field :email%>
+  </div>
+  <div>
+    <%= f.label :password, "密碼"%>
+    <%= f.password_field :password%>
+  </div>
+  <div>
+    <%= f.label :password_confirmation, "確認密碼"%>
+    <%= f.password_field :password_confirmation%>
+  </div>
+  <%= f.submit "註冊"%>    
+<% end %>
+  
